@@ -23,9 +23,8 @@ python --version
 3. Install Selenium
 pip install selenium
 
-4. Install P
+4. Install Pytest
 pip install pytest
 
 5. How to run project :
-```bash
 pytest .\[filename.py]
