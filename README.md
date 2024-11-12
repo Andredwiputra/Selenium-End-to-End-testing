@@ -7,8 +7,8 @@ My first portofolio using selenium python with pytest
 - selenium version 4.25.0
 - pytest 8.3.3
 
-1. Clone the repo:
 ```bash
+1. Clone the repo:
 https://github.com/Andredwiputra/Selenium-End-to-End-testing.git
 
 2. Install Python
