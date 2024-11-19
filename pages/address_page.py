@@ -11,9 +11,9 @@ class AddressPage:
         self.phone_textbox = (By.ID, "telephone")
         self.street_address1 = (By.ID, "street_1")
         self.city_textbox = (By.ID, "city")
-        self.region_dropdown = (By.ID, "region_id")
+        self.region_dropdown = (By.XPATH, "//select[@name='region_id']/option[text()='Alabama']")
         self.zip_textbox = (By.ID, "zip")
-        self.country_dropdown = (By.ID, "country")
+        self.country_dropdown = (By.XPATH, "//select[@name='country_id']/option[text()='Indonesia']")
         self.save_button = (By.XPATH, "//span[contains(text(),'Save Address')]")
     
     def click_dropdown(self):
@@ -39,3 +39,12 @@ class AddressPage:
     
     def click_region(self):
         self.driver.find_element(*self.region_dropdown).click()
+
+    def enter_postalcode(self, zip):
+        self.driver.find_element(*self.zip_textbox).send_keys(zip)
+    
+    def click_country(self):
+        self.driver.find_element(*self.country_dropdown).click()
+    
+    def click_button(self):
+        self.driver.find_element(*self.save_button).click()

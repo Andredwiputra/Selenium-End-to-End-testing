@@ -40,3 +40,8 @@ def test_address_page(driver):
     address_page.enter_address1("Ayani Street")
     address_page.enter_city("Denpasar")
     address_page.click_region()
+    address_page.enter_postalcode("80115")
+    address_page.click_country()
+    time.sleep(2)
+    address_page.click_button()
+    time.sleep(2)
