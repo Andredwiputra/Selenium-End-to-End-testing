@@ -34,5 +34,17 @@ def test_transaction_page(driver):
     transaction_page.click_size()
     transaction_page.click_colour()
     transaction_page.input_qty("4")
-    time.sleep(5)
+    time.sleep(2)
     transaction_page.input_cart()
+    time.sleep(1)
+    transaction_page.select_cart()
+    time.sleep(5)
+    transaction_page.click_checkout()
+    time.sleep(4)
+    transaction_page.click_next()
+    time.sleep(4)
+    transaction_page.click_order()
+    time.sleep(4)
+
+    # assert 'Thank you for your purchase!' in driver.page_source
+    # time.sleep(4)

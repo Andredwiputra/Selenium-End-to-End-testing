@@ -9,6 +9,11 @@ class TransactionPage:
         self.product_colour = (By.XPATH, "//div[@id='option-label-color-93-item-52']")
         self.product_qty = (By.XPATH, "//input[@id='qty']")
         self.button_cart = (By.XPATH, "//span[contains(text(),'Add to Cart')]")
+        self.cart = (By.XPATH, "//span[@class='counter-number']")
+        self.button_checkout = (By.XPATH, "//button[@id='top-cart-btn-checkout']")
+        self.button_next = (By.XPATH, "//span[contains(text(),'Next')]")
+        self.button_order = (By.XPATH, "//span[contains(text(),'Place Order')]")
+        
 
 
     def click_product(self):
@@ -26,3 +31,15 @@ class TransactionPage:
 
     def input_cart(self):
         self.driver.find_element(*self.button_cart).click()
+
+    def select_cart(self):
+        self.driver.find_element(*self.cart).click()
+
+    def click_checkout(self):
+        self.driver.find_element(*self.button_checkout).click()
+
+    def click_next(self):
+        self.driver.find_element(*self.button_next).click()
+
+    def click_order(self):
+        self.driver.find_element(*self.button_order).click()
